@@ -39,8 +39,13 @@ document.getElementById('imageInput').addEventListener('change', function (event
                                 ctx.drawImage(frame, 0, 0, frame.width, frame.height);
 
                                 const resultImage = document.getElementById('resultImage');
-                                resultImage.src = canvas.toDataURL('image/png');
+                                const croppedImageDataURL = canvas.toDataURL('image/png');
+                                resultImage.src = croppedImageDataURL;
                                 resultImage.style.display = 'block';
+
+                                const downloadButton = document.getElementById('downloadButton');
+                                downloadButton.href = croppedImageDataURL;
+                                downloadButton.download = 'imagem-cortada.png';
                             };
                         });
                     }
