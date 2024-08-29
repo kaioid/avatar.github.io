@@ -105,6 +105,10 @@ body {
     }
 }
 
+#image {
+    max-height: 300px;
+}
+
 .cropper-container {
     position: relative;
 }
@@ -176,6 +180,7 @@ body {
         background-image: none;
         background-color: white;
     }
+
     .container {
         height: 840px;
 
@@ -230,4 +235,85 @@ body {
         }
     }
 
+}
+
+
+@media (min-height: 900px) {
+
+    .container {
+        width: 90%;
+        height: 905px;
+
+        .menu {
+            width: 90%;
+        }
+
+        .footer {
+            img {
+                width: 350px;
+                height: auto;
+            }
+        }
+    }
+
+}
+
+@media (min-height: 1024px) {
+
+    .container {
+        width: 80%;
+        height: 1005px;
+
+        .menu {
+            width: 90%;
+        }
+    }
+
+}
+
+@media (min-height: 1180px) {
+
+    .container {
+        width: 80%;
+        height: 1165px;
+
+        .menu {
+            width: 90%;
+        }
+    }
+
+}
+
+@media (min-height: 1360px) {
+
+    .container {
+        width: 90%;
+        height: 1350px;
+
+        .header {
+            h1 {
+                font-size: 3.5em;
+            }
+
+            span {
+                font-size: 2.5em;
+            }
+        }
+
+        .menu {
+            width: 90%;
+
+            #exemplo {
+                max-width: 500px;
+            }
+        }
+
+        .footer {
+            img {
+                width: 600px;
+                height: auto;
+            }
+        }
+
+    }
 }
