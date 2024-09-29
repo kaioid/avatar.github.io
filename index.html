@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/Clt .png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <title>Coletivo Movimento</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span>COLOQUE NOSSO</span>
+            <h1>AVATAR<br> TEMÁTICO</h1>
+            <span>NA SUA FOTO DE PERFIL</span>
+        </div>
+        <div class="menu">
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <button id="customButton">Selecionar Arquivo</button>
+            <div id="cropContainer">
+                <img id="image" style="max-width: 70%;">
+            </div>
+            <button id="cropButton" style="display: none;">Recortar Imagem</button>
+            <img id="exemplo" src="assets/ex.png" alt="">
+        </div>
+        <div class="footer">
+            <img src="assets/coletivo marca.png">
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="resultImage" style="max-width: 100%;">
+            <a id="downloadButton" download="result.png">Download</a>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>
